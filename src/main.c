@@ -20,7 +20,7 @@ static void printMessage(VMMSGTYPE type, const char* message)
     fprintf(stderr, "%s\n", message);
 }
 
-int main()
+int main(void)
 {
     bool success = vmRun(initServer, runServer, printMessage, NULL);
     return (success ? EXIT_SUCCESS : EXIT_FAILURE);
