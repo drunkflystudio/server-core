@@ -2,7 +2,10 @@
 enable_warnings()
 
 fly_module(ServerCore
-    main.fly
+    USES
+        FlyRuntime
+    SOURCES
+        main.fly
     )
 
 set_target_properties(ServerCore PROPERTIES FOLDER "Server")

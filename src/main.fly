@@ -1,6 +1,6 @@
 
-class Application {
+public class Application {
     public static (void) main {
-        //[Console print];
+        [Console print:"Hello, world from Fly language!"];
     }
 }

@@ -2,6 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* FIXME */
+struct Application
+{
+    void (*dispatch)(lua_State* L, const char* selector, int nargs, ...);
+};
+extern struct Application* Application;
+
 static int initServer(lua_State* L)
 {
     UNUSED(L);
@@ -10,7 +17,7 @@ static int initServer(lua_State* L)
 
 static int runServer(lua_State* L)
 {
-    UNUSED(L);
+    Application->dispatch(L, "main", 0);
     return 0;
 }
 
